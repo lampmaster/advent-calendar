@@ -28,6 +28,10 @@ export const Day = ({
 
   useEffect(() => {
     notificationRef.current?.setAttribute("popover", "manual");
+
+    return () => {
+      notificationRef.current?.hidePopover();
+    };
   }, []);
 
   const handleClick = () => {
@@ -40,7 +44,6 @@ export const Day = ({
       return;
     }
 
-    console.log("clicked");
     navigate(`/day/${day}`);
   };
 
