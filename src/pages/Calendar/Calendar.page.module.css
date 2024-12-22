@@ -31,14 +31,8 @@
     }
 }
 
-.bgCircle {
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
 @media (max-width: 500px) {
     .bgCircle {
-        opacity: 1;
         width: 200px;
         height: 200px;
         background-color: var(--color-red);
@@ -47,6 +41,17 @@
         top: 0;
         left: 0;
         transform: translateX(-37%) translateY(-37%);
-        z-index: -1;
+        z-index: -2;
+        animation: appear 1s ease-in;
+    }
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
