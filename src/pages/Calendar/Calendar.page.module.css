@@ -1,6 +1,21 @@
-.title {
+.align {
+    display: flex;
+    justify-content: center;
+
+}
+
+.titleContainer {
     text-align: center;
     padding: 55px 0 65px;
+}
+
+.title {
+    line-height: 1.1;
+}
+
+.subTitle {
+    text-align: end;
+    font-size: 15px;
 }
 
 .calendar {
@@ -31,7 +46,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .bgCircle {
         width: 200px;
         height: 200px;
