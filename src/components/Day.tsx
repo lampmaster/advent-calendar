@@ -1,8 +1,10 @@
 import s from "./Day.module.css";
 import cn from "classnames";
+import { useNavigate } from "react-router";
 
-type DayProps = {
+export type DayProps = {
   text: string;
+  id: string;
   size?: "square" | "double" | "wide" | undefined;
   transparent?: boolean;
   color?: "white" | "gradient" | "dark-green";
@@ -13,7 +15,14 @@ export const Day = ({
   transparent,
   color,
   text,
+  id,
 }: DayProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/day/${id}`);
+  };
+
   return (
     <div
       className={cn(s.container, s[size], {
@@ -22,6 +31,7 @@ export const Day = ({
         [s.white]: color === "white",
         [s.darkGreen]: color === "dark-green",
       })}
+      onClick={handleClick}
     >
       <p>{text}</p>
     </div>
