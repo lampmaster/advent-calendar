@@ -1,0 +1,14 @@
+:root {
+    --color-white: #ffffff;
+
+    --color-green:#05890D;
+    --color-green-accent:#21D12A;
+    --color-green-dark:#005605;
+
+    --color-red: #FF3C00;
+    --color-yellow: #FFD900;
+
+    --main-bg: var(--color-green);
+
+    --border-radius: 20px;
+}
