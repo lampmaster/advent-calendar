@@ -8,7 +8,7 @@ function App() {
     <div className={s.container}>
       <Routes>
         <Route path={"/"} element={<CalendarPage />} />
-        <Route path={"/day/:id"} element={<DayPage />} />
+        <Route path={"/day/:day"} element={<DayPage />} />
       </Routes>
     </div>
   );
