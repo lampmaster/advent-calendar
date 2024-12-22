@@ -27,6 +27,7 @@ export const CalendarPage = () => {
           <Day key={props.id} {...props} />
         ))}
       </div>
+      <div className={s.bgCircle}></div>
     </div>
   );
 };
