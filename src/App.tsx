@@ -1,21 +1,15 @@
-import { Day } from "./components/Day.tsx";
 import s from "./App.module.css";
+import { Route, Routes } from "react-router";
+import { CalendarPage } from "./pages/Calendar/Calendar.page.tsx";
+import { DayPage } from "./pages/Day/Day.page.tsx";
 
 function App() {
   return (
     <div className={s.container}>
-      <h1 className={s.title}>advent calendar</h1>
-      <div className={s.calendar}>
-        <Day text={"23"} color={"white"} />
-        <Day text={"24"} />
-        <Day text={"25"} color={"white"} />
-        <Day text={"26 december"} size={"wide"} transparent />
-        <Day text={"27"} color={"dark-green"} />
-        <Day text={"28"} />
-        <Day text={"29"} color={"white"} />
-        <Day text={"30"} color={"white"} />
-        <Day text={"31 dec"} size={"double"} color={"gradient"} />
-      </div>
+      <Routes>
+        <Route path={"/"} element={<CalendarPage />} />
+        <Route path={"/day/:id"} element={<DayPage />} />
+      </Routes>
     </div>
   );
 }

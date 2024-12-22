@@ -1,18 +1,7 @@
 .container {
+    position: relative;
+    height: 100%;
     margin: 0 auto;
     max-width: 400px;
     min-width: 320px;
-}
-
-.title {
-    margin: 55px 0 65px;
-}
-
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 22px;
-
-    margin: 20px;
 }
