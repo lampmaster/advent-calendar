@@ -1,0 +1,32 @@
+.title {
+    text-align: center;
+    margin: 55px 0 65px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 22px;
+
+    margin: 20px;
+}
+
+.pageAnimation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
