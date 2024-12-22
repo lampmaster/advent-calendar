@@ -15,7 +15,7 @@ const DAYS: Array<DayProps> = [
   { day: "28", text: "28" },
   { day: "29", text: "29", color: "white" },
   { day: "30", text: "30", color: "white" },
-  { day: "31", text: "30 dec", color: "gradient", size: "double" },
+  { day: "31", text: "31 dec", color: "gradient", size: "double" },
 ];
 
 export const CalendarPage = () => {
