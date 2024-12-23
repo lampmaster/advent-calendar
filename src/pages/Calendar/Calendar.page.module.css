@@ -58,7 +58,7 @@
         left: 0;
         transform: translateX(-37%) translateY(-37%);
         z-index: -2;
-        animation: appear 1s ease-in;
+        animation: appear 1.7s ease-in;
     }
 }
 
