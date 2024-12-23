@@ -65,7 +65,7 @@ export const DayPage = () => {
         <button onClick={handleBack} className={s.buttonBack}>
           Back
         </button>
-        {day} Января
+        {day} Декабря
       </div>
       <Markdown remarkPlugins={[remarkGfm]} className={s.text}>
         {currentDayIssue ? currentDayIssue : "Something went wrong"}
