@@ -50,7 +50,7 @@ export const Day = ({
   return (
     <>
       <div className={s.notification} ref={notificationRef}>
-        The day has not yet come
+        День еще не наступил
       </div>
       <div
         className={cn(s.container, s[size], {
