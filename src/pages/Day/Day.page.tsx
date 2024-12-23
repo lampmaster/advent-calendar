@@ -1,6 +1,6 @@
 import s from "./Day.page.module.css";
 import cn from "classnames";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -51,12 +51,22 @@ const DAY_TASK: Record<string, string> = {
 
 export const DayPage = () => {
   const { day } = useParams();
+  const navigate = useNavigate();
 
   const currentDayIssue = day ? DAY_TASK[day] : undefined;
 
+  const handleBack = () => {
+    navigate("/");
+  };
+
   return (
     <div className={cn(s.container, s.pageAnimation)}>
-      <div className={s.title}>{day} Января</div>
+      <div className={s.title}>
+        <button onClick={handleBack} className={s.buttonBack}>
+          Back
+        </button>
+        {day} Января
+      </div>
       <Markdown remarkPlugins={[remarkGfm]} className={s.text}>
         {currentDayIssue ? currentDayIssue : "Something went wrong"}
       </Markdown>
