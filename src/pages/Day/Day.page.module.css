@@ -19,6 +19,8 @@
     position: absolute;
     left: 20px;
     top: 38px;
+    width: 42px;
+    height: 42px;
 
     font-size: 35px;
     color: var(--color-white);
