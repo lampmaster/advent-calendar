@@ -17,14 +17,33 @@
 
 .buttonBack {
     position: absolute;
-    left: 10px;
-    top: 50px;
+    left: 20px;
+    top: 38px;
 
-    font-size: 15px;
+    font-size: 35px;
     color: var(--color-white);
-    background-color: transparent;
+    background-color: var(--color-white);
+    border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+.buttonBack:hover {
+    background-color: var(--color-grey);
+}
+
+.calendarIcon {
+    position: relative;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+}
+
+.calendarIcon path {
+    fill: var(--color-green);
+}
+
+.buttonNextDay {
 }
 
 .buttonBack:hover {

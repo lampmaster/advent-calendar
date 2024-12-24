@@ -75,7 +75,7 @@ export const DayPage = () => {
     <div className={cn(s.container, s.pageAnimation)}>
       <div className={s.title}>
         <button onClick={handleBack} className={s.buttonBack}>
-          Back
+          <CalendarIcon className={s.calendarIcon} />
         </button>
         {day} Декабря
       </div>
