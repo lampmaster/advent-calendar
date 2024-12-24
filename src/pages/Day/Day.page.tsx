@@ -3,6 +3,8 @@ import cn from "classnames";
 import { useNavigate, useParams } from "react-router";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Day } from "../../components/Day.tsx";
+import CalendarIcon from "../../assets/icons/calendar.svg?react";
 
 const DAY_TASK: Record<string, string> = {
   "23": `## 🔥 День 1: благодарность
@@ -49,9 +51,19 @@ const DAY_TASK: Record<string, string> = {
     `,
 };
 
+const FIRST_CALENDAR_DAY = 23;
+const LAST_CALENDAR_DAY = 31;
+
 export const DayPage = () => {
-  const { day } = useParams();
+  const { day: dayFromParam } = useParams();
   const navigate = useNavigate();
+  const day = Number(dayFromParam);
+
+  const currentDay = new Date().getDate();
+  const isNextDayAvaliable =
+    day && currentDay > Number(day) && Number(day) !== LAST_CALENDAR_DAY;
+
+  const isPrevDayAvailable = Number(day) !== FIRST_CALENDAR_DAY;
 
   const currentDayIssue = day ? DAY_TASK[day] : undefined;
 
@@ -70,6 +82,31 @@ export const DayPage = () => {
       <Markdown remarkPlugins={[remarkGfm]} className={s.text}>
         {currentDayIssue ? currentDayIssue : "Something went wrong"}
       </Markdown>
+      <>
+        {isNextDayAvaliable && <p className={s.text}>А завтра уже наступило</p>}
+        <div className={s.footerControls}>
+          {isPrevDayAvailable && (
+            <Day
+              className={s.buttonNextDay}
+              text={"Вчера"}
+              day={Number(day) - 1}
+              size={"double"}
+              color={"dark-green"}
+              isButton
+            />
+          )}
+          {isNextDayAvaliable && (
+            <Day
+              className={s.buttonNextDay}
+              text={"Завтра"}
+              day={Number(day) + 1}
+              size={"double"}
+              color={"gradient"}
+              isButton
+            />
+          )}
+        </div>
+      </>
     </div>
   );
 };
