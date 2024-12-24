@@ -19,19 +19,16 @@
     position: absolute;
     left: 20px;
     top: 38px;
-    width: 42px;
-    height: 42px;
 
-    font-size: 35px;
     color: var(--color-white);
-    background-color: var(--color-white);
+    background-color: transparent;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
 
-.buttonBack:hover {
-    background-color: var(--color-grey);
+.buttonBack:hover .calendarIcon path {
+    fill: var(--color-grey);
 }
 
 .calendarIcon {
@@ -42,7 +39,7 @@
 }
 
 .calendarIcon path {
-    fill: var(--color-green);
+    fill: var(--color-white);
 }
 
 .buttonNextDay {
