@@ -9,6 +9,13 @@
     margin: 0 20px 30px;
 }
 
+.text {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    color: var(--color-black);
+}
+
 .input {
     padding: 16px;
     border-radius: var(--border-radius);

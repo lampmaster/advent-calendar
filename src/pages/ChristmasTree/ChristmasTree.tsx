@@ -61,7 +61,12 @@ export const ChristmasTreePage = () => {
   return (
     <div className={s.container}>
       <form className={s.form} onSubmit={handleSubmit}>
-        <p>Сегодня можно просто написать публичное пожелание на Новый год</p>
+        <p className={s.text}>
+          Сегодня у тебя есть возможность написать вдохновляющее пожелание для
+          себя или окружающих. <br />
+          <br /> Кто знает, возможно, именно твоё пожелание станет для кого-то
+          источником мотивации.
+        </p>
         <input
           className={s.input}
           value={name}
