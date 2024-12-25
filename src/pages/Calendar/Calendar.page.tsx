@@ -7,7 +7,7 @@ const DAYS: Array<DayProps> = [
   { day: 25, text: "25", color: "white" },
   {
     day: 26,
-    text: "26 december",
+    text: "2🎄december",
     size: "wide",
     transparent: true,
   },
