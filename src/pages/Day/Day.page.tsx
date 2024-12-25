@@ -9,7 +9,9 @@ import {
   DAY_TASKS,
   FIRST_CALENDAR_DAY,
   LAST_CALENDAR_DAY,
+  WISHES_DAY,
 } from "./constants.ts";
+import { ChristmasTreePage } from "../ChristmasTree/ChristmasTree.tsx";
 
 export const DayPage = () => {
   const { day: dayFromParam } = useParams();
@@ -28,6 +30,19 @@ export const DayPage = () => {
     navigate("/");
   };
 
+  if (day === WISHES_DAY) {
+    return (
+      <div className={cn(s.pageAnimation)}>
+        <div className={s.title}>
+          <button onClick={handleBack} className={s.buttonBack}>
+            <CalendarIcon className={s.calendarIcon} />
+          </button>
+          {day} Декабря
+        </div>
+        <ChristmasTreePage />
+      </div>
+    );
+  }
   return (
     <div className={cn(s.container, s.pageAnimation)}>
       <div className={s.title}>

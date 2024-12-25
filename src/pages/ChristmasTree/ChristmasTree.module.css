@@ -1,0 +1,96 @@
+.container {
+    background-color: var(--color-green);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 20px 30px;
+}
+
+.input {
+    padding: 16px;
+    border-radius: var(--border-radius);
+    border: none;
+    resize: vertical;
+}
+
+.submitButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    border: none;
+    background: linear-gradient(to right, var(--color-red), var(--color-yellow));
+    width: fit-content;
+    transition: opacity 0.2s;
+}
+
+.submitButton :only-child {
+    transition: transform 0.2s;
+}
+
+.submitButton:hover:not(:disabled) :only-child {
+    transform: scale(1.05);
+}
+
+.submitButton:disabled {
+    opacity: 0.85;
+}
+
+.card {
+    font-size: 18px;
+    margin: 0 20px;
+    padding: 20px;
+
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+    animation: cardAppear 0.7s backwards;
+    animation-delay: 0.2s;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.moderationTag {
+    padding: 3px 6px;
+
+    color: var(--color-white);
+    background-color: var(--color-red-light);
+
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.cardName {
+    font-weight: 700;
+}
+
+.cardMessage {
+    font-weight: 500;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+@keyframes cardAppear {
+     from {
+         transform: translateY(100%);
+         opacity: 0;
+     }
+     to {
+         transform: translateY(0%);
+         opacity: 1;
+     }
+ }

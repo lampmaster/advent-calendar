@@ -1,5 +1,6 @@
 export const FIRST_CALENDAR_DAY = 23;
 export const LAST_CALENDAR_DAY = 31;
+export const WISHES_DAY = 26;
 
 export const DAY_TASKS: Record<number, string> = {
   23: `## 🔥 День 1: благодарность
