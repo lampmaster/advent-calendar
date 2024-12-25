@@ -75,6 +75,7 @@ export const ChristmasTreePage = () => {
         />
         <textarea
           className={s.input}
+          maxLength={200}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={"Твое пожелание"}
