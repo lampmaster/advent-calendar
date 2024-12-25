@@ -67,12 +67,6 @@ export const ChristmasTreePage = () => {
           <br /> Кто знает, возможно, именно твоё пожелание станет для кого-то
           источником мотивации.
         </p>
-        <input
-          className={s.input}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder={"Твое имя (опционально)"}
-        />
         <textarea
           className={s.input}
           maxLength={200}
