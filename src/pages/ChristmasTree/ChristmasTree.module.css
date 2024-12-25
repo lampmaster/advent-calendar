@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 0 20px 20px;
+    margin: 0 20px 30px;
 }
 
 .input {
@@ -50,6 +50,23 @@
     transition: all 0.2s;
     animation: cardAppear 0.7s backwards;
     animation-delay: 0.2s;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.moderationTag {
+    padding: 3px 6px;
+
+    color: var(--color-white);
+    background-color: var(--color-red-light);
+
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 500;
 }
 
 .cardName {

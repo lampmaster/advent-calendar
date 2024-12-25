@@ -46,7 +46,12 @@ export const ChristmasTreePage = () => {
     return wishes.map((data) => {
       return (
         <div key={`${data.id}-${data.name}-${data.message}`} className={s.card}>
-          <div className={s.cardName}>{data.name}</div>
+          <div className={s.cardHeader}>
+            <div className={s.cardName}>{data.name}</div>
+            {!data.approved && (
+              <div className={s.moderationTag}>На модерации</div>
+            )}
+          </div>
           <div className={s.cardMessage}>{data.message}</div>
         </div>
       );
