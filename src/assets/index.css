@@ -32,6 +32,11 @@
   height: 100%;
 }
 
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 h1 {
   font-weight: 500;
   font-size: 30px
