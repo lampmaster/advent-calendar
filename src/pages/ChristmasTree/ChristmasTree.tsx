@@ -76,7 +76,7 @@ export const ChristmasTreePage = () => {
           <div className={s.cardHeader}>
             <div className={s.cardName}>{data.name}</div>
             {!data.approved && (
-              <div className={s.moderationTag}>На модерации</div>
+              <div className={s.moderationTag}>На модерации</div>
             )}
           </div>
           <div className={s.cardMessage}>{data.message}</div>

@@ -120,6 +120,7 @@
 
 .moderationTag {
     padding: 3px 6px;
+    margin-left: 5px;
 
     color: var(--color-white);
     background-color: var(--color-red-light);
