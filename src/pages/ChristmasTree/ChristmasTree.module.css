@@ -1,5 +1,6 @@
 .container {
     background-color: var(--color-green);
+    padding-bottom: 20px;
 }
 
 .popup {
@@ -140,7 +141,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 20px;
 }
 
 @keyframes cardAppear {
