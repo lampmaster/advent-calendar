@@ -61,3 +61,7 @@ export const getUnknownName = () => {
   const index = Math.floor(Math.random() * (animals.length - 1));
   return animals[index];
 };
+
+export const capitalizeFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};

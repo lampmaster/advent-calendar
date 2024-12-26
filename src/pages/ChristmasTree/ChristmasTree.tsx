@@ -1,7 +1,11 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { addWish, getApprovedWishes, Wish } from "../../client/API.ts";
 import s from "./ChristmasTree.module.css";
-import { AnimalName, getUnknownName } from "../../client/utils.ts";
+import {
+  AnimalName,
+  capitalizeFirstLetter,
+  getUnknownName,
+} from "../../client/utils.ts";
 import CloseIcon from "../../assets/icons/close.svg?react";
 
 export const ChristmasTreePage = () => {
@@ -33,7 +37,10 @@ export const ChristmasTreePage = () => {
       const { emoji, displayName, gender } = getUnknownName();
 
       const prefix = gender === "female" ? "Неопознанная" : "Неопознанный";
-      const userName = `${emoji} ${prefix} ${displayName}`;
+      const capitalizedName = capitalizeFirstLetter(displayName);
+
+      displayName[0].toUpperCase();
+      const userName = `${emoji} ${prefix} ${capitalizedName}`;
 
       const { success, data } = await addWish(messageToSend, userName);
 
