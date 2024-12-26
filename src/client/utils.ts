@@ -28,7 +28,7 @@ const animals: AnimalName[] = [
   { displayName: "лиса", emoji: "🦊", gender: "female" },
   { displayName: "осьминог", emoji: "🐙", gender: "male" },
   { displayName: "фламинго", emoji: "🦩", gender: "female" },
-  { displayName: "лягушонок", emoji: "🐸", gender: "male" },
+  { displayName: "лягушка", emoji: "🐸", gender: "female" },
   { displayName: "жираф", emoji: "🦒", gender: "male" },
   { displayName: "сурикат", emoji: "🦦", gender: "male" },
   { displayName: "барсук", emoji: "🦡", gender: "male" },
@@ -55,7 +55,6 @@ const animals: AnimalName[] = [
   { displayName: "лама", emoji: "🦙", gender: "female" },
   { displayName: "ленивец", emoji: "🦥", gender: "male" },
   { displayName: "северный олень", emoji: "🦌", gender: "male" },
-  { displayName: "морская звезда", emoji: "🌟", gender: "female" },
 ];
 
 export const getUnknownName = () => {
