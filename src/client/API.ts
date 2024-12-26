@@ -1,5 +1,4 @@
 import { supabase } from "./client.ts";
-import { getUnknownName } from "./utils.ts";
 
 export type Wish = {
   id: number;
@@ -9,12 +8,10 @@ export type Wish = {
   name: string;
 };
 
-export const addWish = async (message: string, name: string | undefined) => {
-  const userName = name || getUnknownName();
-
+export const addWish = async (message: string, name: string) => {
   const { data, error } = await supabase
     .from("wishes")
-    .insert([{ message, name: userName }])
+    .insert([{ message, name }])
     .select();
 
   if (error) {
