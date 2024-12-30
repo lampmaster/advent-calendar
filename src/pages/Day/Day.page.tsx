@@ -55,7 +55,6 @@ export const DayPage = () => {
         {currentDayIssue ? currentDayIssue : "Something went wrong"}
       </Markdown>
       <>
-        {isNextDayAvaliable && <p className={s.text}>А завтра уже наступило</p>}
         <div className={s.footerControls}>
           {isPrevDayAvailable && (
             <Day
