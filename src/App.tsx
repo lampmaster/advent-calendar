@@ -9,8 +9,6 @@ import { SnowFall } from "./components/SnowFall.tsx";
 function App() {
   return (
     <>
-      <SnowFall />
-
       <div className={s.container}>
         <Routes>
           <Route path={"/"} element={<CalendarPage />} />
@@ -25,6 +23,8 @@ function App() {
         </Routes>
         <Analytics />
       </div>
+
+      <SnowFall />
     </>
   );
 }
